@@ -4,14 +4,15 @@
 
 **E-book completo e interativo sobre Prompt Engineering para educadores e profissionais**
 
-[![Deploy Status](https://img.shields.io/badge/deploy-success-brightgreen)](https://educa-ia.vercel.app/)
+[![Netlify Status](https://img.shields.io/badge/netlify-ready-00C7B7?logo=netlify)](https://www.netlify.com/)
+[![Deploy Status](https://img.shields.io/badge/deploy-ready-brightgreen)](https://github.com/pedroallas/educa-ia)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](#)
 [![React](https://img.shields.io/badge/React-18.3.1-blue)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6.2-blue)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.1-38bdf8)](https://tailwindcss.com/)
 [![Tests](https://img.shields.io/badge/tests-66%20passed-success)](https://github.com/pedroallas/educa-ia)
 
-[🚀 Demo Online](https://educa-ia.vercel.app/) | [🐛 Reportar Bug](https://github.com/pedroallas/educa-ia/issues) | [💡 Solicitar Feature](https://github.com/pedroallas/educa-ia/issues)
+[🚀 Deploy Guide](./DEPLOY_GUIDE.md) | [🐛 Reportar Bug](https://github.com/pedroallas/educa-ia/issues) | [💡 Solicitar Feature](https://github.com/pedroallas/educa-ia/issues)
 
 </div>
 
