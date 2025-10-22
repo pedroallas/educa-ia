@@ -61,10 +61,10 @@ export const TableOfContents = ({ items }: TableOfContentsProps) => {
       {/* Botão mobile para abrir TOC */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 left-6 z-40 md:hidden bg-primary text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all"
+        className="fixed top-4 left-4 z-50 md:hidden text-primary p-3 transition-all hover:opacity-80"
         aria-label="Abrir índice de navegação"
       >
-        {isOpen ? <X size={24} /> : <Menu size={24} />}
+        {isOpen ? <X size={20} /> : <Menu size={20} />}
       </button>
 
       {/* Overlay para mobile */}
