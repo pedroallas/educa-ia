@@ -31,7 +31,7 @@ export const Navbar = () => {
             className="flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer"
             aria-label="Voltar ao início"
           >
-            <img src={logo} alt="Padevs School" className="h-8 md:h-12" />
+            <img src={logo} alt="Padevs School" className="h-8 md:h-14" />
           </button>
         </div>
       </div>
