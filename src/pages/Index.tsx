@@ -9,7 +9,6 @@ import { Quiz, QuizQuestion } from "@/components/Quiz";
 import { PromptSimulator } from "@/components/PromptSimulator";
 import { DownloadSection } from "@/components/DownloadSection";
 import { NextSteps } from "@/components/NextSteps";
-import { AccessibilityControls } from "@/components/AccessibilityControls";
 import { SEO } from "@/components/SEO";
 import { StructuredData } from "@/components/StructuredData";
 import { SkipLink } from "@/components/SkipLink";
@@ -160,16 +159,13 @@ const Index = () => {
       {/* Table of Contents - Menu Lateral Fixo */}
       <TableOfContents items={tocItems} />
 
-      {/* Controles de Acessibilidade */}
-      <AccessibilityControls />
-
       {/* Hero com ajuste para barra lateral no desktop */}
-      <div className="md:mr-80">
+      <div className="md:ml-80">
         <Hero />
       </div>
 
       {/* Container principal com margem para o TOC no desktop */}
-      <main className="md:mr-80" id="main-content">
+      <main className="md:ml-80" id="main-content">
         {/* Introdução */}
         <ContentSection
           id="intro"
@@ -891,7 +887,7 @@ O plano deve incluir:
       </main>
 
       {/* Footer com ajuste para barra lateral no desktop */}
-      <div className="md:mr-80">
+      <div className="md:ml-80">
         <Footer />
       </div>
     </div>
