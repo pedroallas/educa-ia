@@ -61,7 +61,7 @@ export const TableOfContents = ({ items }: TableOfContentsProps) => {
       {/* Botão mobile para abrir TOC */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-40 md:hidden bg-primary text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all"
+        className="fixed bottom-6 left-6 z-40 md:hidden bg-primary text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all"
         aria-label="Abrir índice de navegação"
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -78,22 +78,22 @@ export const TableOfContents = ({ items }: TableOfContentsProps) => {
       {/* Sidebar */}
       <aside
         className={`
-          fixed top-20 right-0 h-[calc(100vh-5rem)] z-40
-          w-80 bg-card/95 backdrop-blur-lg border-l border-border
-          overflow-y-auto transition-transform duration-300
-          shadow-xl
-          ${isOpen ? "translate-x-0" : "translate-x-full md:translate-x-0"}
+          fixed top-20 left-0 h-[calc(100vh-5rem)] z-40
+          w-80 bg-card/95 backdrop-blur-lg border-r border-border
+          transition-transform duration-300
+          shadow-xl flex flex-col
+          ${isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
           hidden md:block
         `}
         aria-label="Navegação da página"
       >
-        <div className="p-6 sticky top-0">
+        <div className="p-5 flex flex-col h-full">
           {/* Botão Início */}
           <button
             onClick={() => {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="w-full mb-4 px-3 py-2.5 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary font-medium transition-all flex items-center justify-center gap-2 group"
+            className="w-full mb-3 px-3 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary font-medium transition-all flex items-center justify-center gap-2 group flex-shrink-0"
             aria-label="Voltar ao início da página"
           >
             <svg
@@ -114,7 +114,7 @@ export const TableOfContents = ({ items }: TableOfContentsProps) => {
             Início
           </button>
 
-          <nav className="space-y-1" aria-label="Índice de conteúdo">
+          <nav className="space-y-1 flex-1 overflow-hidden" aria-label="Índice de conteúdo">
             {items.map((item) => (
               <button
                 key={item.id}
@@ -135,7 +135,7 @@ export const TableOfContents = ({ items }: TableOfContentsProps) => {
                 <ChevronRight
                   size={16}
                   className={`
-                    transition-transform
+                    transition-transform flex-shrink-0
                     ${
                       activeSection === item.id
                         ? "opacity-100"
@@ -151,7 +151,7 @@ export const TableOfContents = ({ items }: TableOfContentsProps) => {
 
       {/* Versão Mobile - Drawer completo */}
       {isOpen && (
-        <aside className="fixed inset-y-0 right-0 w-80 bg-card border-l border-border z-50 md:hidden overflow-y-auto">
+        <aside className="fixed inset-y-0 left-0 w-80 bg-card border-r border-border z-50 md:hidden overflow-y-auto">
           <div className="p-6">
             <div className="flex items-center justify-between mb-4">
               <button
